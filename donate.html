@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержать проект | Красный Волк</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logov.png" alt="Красный Волк">
+            <div class="logo-text">
+                <span class="logo-main">КРАСНЫЙ ВОЛК</span>
+                <span class="logo-sub">ЗАЩИТА КРАСНЫХ ВОЛКОВ</span>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="podopechnye.html">Мои подопечные</a></li>
+                <li><a href="o-sozdatele.html">О создателе</a></li>
+                <li><a href="privacy.docx" target="_blank">Политика конфиденциальности</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="donate-page">
+    <h1 class="section-title">Поддержать проект</h1>
+    <p class="donate-subtitle">Ваша помощь поможет сохранить красных волков</p>
+
+    <div class="donate-container">
+        
+        <!-- Левый столбец -->
+        <div class="donate-info">
+            <h2>Способы пожертвования</h2>
+            
+            <div class="bank-details">
+                <h3>Банковский перевод (СБП)</h3>
+                <p><strong>Получатель:</strong> Виктория Пермякова</p>
+                <p><strong>Номер карты:</strong> <span class="copy-text" onclick="copyToClipboard(this)">2200 0000 0000 0000</span></p>
+                <p><strong>Телефон (СБП):</strong> <span class="copy-text" onclick="copyToClipboard(this)">+7 (951) 693-15-67</span></p>
+                <p><strong>Назначение платежа:</strong> Пожертвование на проект Красный Волк</p>
+            </div>
+
+            <div class="qr-code">
+                <h3>QR-код для быстрого платежа</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/500px-QR_Code_Example.svg.png" 
+                     alt="QR-код для пожертвования" 
+                     width="260">
+                <p>Наведите камеру телефона на QR-код</p>
+            </div>
+        </div>
+
+        <!-- Правый столбец -->
+        <div class="donate-form">
+            <h3>Или заполните форму</h3>
+            <form action="#" method="post">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="number" placeholder="Сумма (в рублях)" min="100" value="500" required>
+                <textarea placeholder="Сообщение (по желанию)" rows="4"></textarea>
+                <button type="submit" class="btn">Отправить пожертвование</button>
+            </form>
+            <p class="small">Все средства идут на поддержку подопечных и проекта</p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <a href="index.html" class="logo-footer">
+            <img src="images/logov.png" alt="Красный Волк">
+        </a>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="podopechnye.html">Мои подопечные</a></li>
+                <li><a href="o-sozdatele.html">О создателе</a></li>
+                <li><a href="privacy.docx" target="_blank">Политика конфиденциальности</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2026 Проект «Красный Волк». Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+function copyToClipboard(el) {
+    const text = el.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        const original = el.innerText;
+        el.innerText = "Скопировано!";
+        setTimeout(() => el.innerText = original, 2000);
+    });
+}
+</script>
+
+</body>
+</html>
