@@ -870,3 +870,75 @@ footer {
         gap: 40px;
     }
 }
+
+/* ==================== СТРАНИЦА "О СОЗДАТЕЛЕ" ==================== */
+
+.creator-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.creator-content {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.creator-photo {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.creator-text h2 {
+    font-size: 2.4rem;
+    color: var(--color1);
+    margin-bottom: 8px;
+}
+
+.position {
+    color: var(--color3);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.contact-section {
+    background: #f8f1e3;
+    padding: 80px 25px;
+    margin-top: 80px;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.05rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color3);
+    outline: none;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .creator-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+}
